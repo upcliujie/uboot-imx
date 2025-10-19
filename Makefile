@@ -16,6 +16,9 @@ NAME =
 # (this increases performance and avoids hard-to-debug behaviour)
 MAKEFLAGS += -rR
 
+ARCH ?= arm
+CROSS_COMPILE ?= arm-linux-gnueabihf-
+
 # Determine target architecture for the sandbox
 include include/host_arch.h
 ifeq ("", "$(CROSS_COMPILE)")
